@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -148,6 +148,7 @@ main h3{
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    image-rendering: auto;
 }
 
 
@@ -178,6 +179,9 @@ section h2{
 .Reconocimineto{
     flex: 1;
     max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -190,9 +194,10 @@ section h2{
 
 .Reconocimineto h2{
     font-size: 25px;
-    width: fit-content;
-    white-space: nowrap;
-    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    white-space: normal;
 }
 
 
@@ -211,6 +216,7 @@ section h2{
 .Estudio img{
     width: 70px;
     margin-bottom: 15px;
+       image-rendering: auto;
 }
 
 .Estudio h2{
@@ -307,6 +313,7 @@ section h2{
     width: 40px;
     height: 40px;
     object-fit: contain;
+    image-rendering: auto;
 }
 
 .ContentContacto .texto{
@@ -368,181 +375,222 @@ footer p{
 }
 
 /*.................................................................................... */
-/* ========================================= */
-/* 📱 TABLET (hasta 1024px) */
-/* ========================================= */
-@media (max-width: 1024px){
+@media (max-width:1024px){
 
-    main{
-        padding: 80px 30px;
-    }
+main{
+padding:70px 30px;
+}
 
-    main h2{
-        font-size: 40px;
-    }
+main h2{
+font-size:42px;
+}
 
-    main h3{
-        font-size: 22px;
-    }
+main h3{
+font-size:22px;
+}
 
-    .ContentServicios{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.botonesMain{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:100%;
+gap:15px;
+margin-top:40px;
+}
 
-    .ContentServicios div{
-        max-width: 45%;
-    }
+.botonMain{
+display:block;
+width:90%;
+max-width:320px;
+margin:0 auto;
+text-align:center;
+}
 
-    .ContentR{
-        flex-wrap: wrap;
-        gap: 40px;
-    }
+.ContentServicios{
+flex-wrap:wrap;
+gap:25px;
+}
 
-    .Reconocimineto{
-        max-width: 45%;
-    }
+.ContentServicios div{
+max-width:45%;
+}
+
+.ContentR{
+flex-wrap:wrap;
+gap:45px;
+}
+
+.Reconocimineto{
+max-width:45%;
+}
+}
+/* ............................................................................................. */
+
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+gap:12px;
+text-align:center;
+padding:18px;
+}
+
+h1{
+font-size:18px;
+}
+
+main{
+padding:55px 20px;
+}
+
+main h2{
+font-size:30px;
+}
+
+main h3{
+font-size:18px;
+}
+
+.botonesMain{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:100%;
+gap:15px;
+margin-top:40px;
+}
+
+.botonMain{
+display:block;
+width:90%;
+max-width:320px;
+margin:0 auto;
+text-align:center;
+}
+
+.NServicios{
+padding:60px 20px;
+}
+
+.ContentServicios{
+flex-direction:column;
+gap:25px;
+}
+
+.ContentServicios div{
+max-width:100%;
+}
+
+.ContentR{
+flex-direction:column;
+gap:35px;
+}
+
+.Reconocimineto{
+max-width:100%;
+}
+
+section{
+padding:60px 20px;
+}
+
+section h2{
+font-size:32px;
+}
+
+.ListaEstudio{
+width:100%;
+padding:20px;
+}
+
+.ListaEstudio li{
+font-size:16px;
+}
+
+.ContentContacto img{
+width:34px;
+height:34px;
+}
+
+.ContentContacto h2{
+font-size:18px;
+}
+
+.ContentContacto h3{
+font-size:14px;
+}
+
+.ContentContacto p{
+font-size:13px;
+}
 }
 
 
-/* ========================================= */
-/* 📱 CELULARES (hasta 768px) */
-/* ========================================= */
-@media (max-width: 768px){
+/* ............................................................. */
+@media (max-width:480px){
 
-    /* NAV */
-    nav{
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    h1{
-        font-size: 18px;
-    }
-
-    /* MAIN */
-    main{
-        padding: 60px 20px;
-    }
-
-    main h2{
-        font-size: 30px;
-    }
-
-    main h3{
-        font-size: 18px;
-    }
-
-    .botonesMain{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .botonMain{
-        width: 90%;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    /* SERVICIOS */
-    .ContentServicios{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .ContentServicios div{
-        max-width: 100%;
-    }
-
-    /* RECONOCIMIENTOS */
-    .ContentR{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .Reconocimineto{
-        max-width: 100%;
-    }
-
-    /* ESTUDIO */
-    .ListaEstudio{
-        width: 100%;
-    }
-
-    .ListaEstudio li{
-        font-size: 16px;
-    }
-
-    /* CONTACTO */
-    .ContentContacto > div,
-    .ContentContacto > a{
-        align-items: flex-start;
-    }
-
-    .ContentContacto img{
-        width: 35px;
-        height: 35px;
-    }
-
-    .ContentContacto h2{
-        font-size: 18px;
-    }
-
-    .ContentContacto h3{
-        font-size: 14px;
-    }
-
-    .ContentContacto p{
-        font-size: 13px;
-    }
+main h2{
+font-size:24px;
 }
 
+main h3{
+font-size:16px;
+}
 
-/* ========================================= */
-/* 📱 CELULARES CHICOS (hasta 480px) */
-/* ========================================= */
-@media (max-width: 480px){
+.botonesMain{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:100%;
+gap:15px;
+margin-top:40px;
+}
 
-    main h2{
-        font-size: 24px;
-    }
+.botonMain{
+display:block;
+width:90%;
+max-width:320px;
+margin:0 auto;
+text-align:center;
+}
 
-    main h3{
-        font-size: 16px;
-    }
+.NTxtT,
+section h2{
+font-size:28px;
+}
 
-    .botonMain{
-        padding: 15px;
-        margin-top: 15px;
-    }
+.NTxt2{
+font-size:22px;
+}
 
-    .NTxtT{
-        font-size: 28px;
-    }
+.NTxtP{
+font-size:16px;
+}
 
-    section h2{
-        font-size: 28px;
-    }
+.Reconocimineto p{
+font-size:16px;
+}
 
-    .Estudio h2{
-        font-size: 24px;
-    }
+.Estudio h2{
+font-size:24px;
+}
 
-    .Estudio h3{
-        font-size: 16px;
-    }
+.Estudio h3{
+font-size:16px;
+}
 
-    footer h2{
-        font-size: 20px;
-    }
+footer h2{
+font-size:20px;
+}
 
-    footer h3{
-        font-size: 14px;
-    }
+footer h3{
+font-size:14px;
+}
 
-    footer p{
-        font-size: 12px;
-    }
+footer p{
+font-size:12px;
+}
 }
